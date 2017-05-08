@@ -1,21 +1,21 @@
 #How-to: Setup a multi-node Hadoop cluster on Ukko
 
-**##Prerequisites**
-Before you start, please read Ukko instructions carefully: [https://www.cs.helsinki.fi/en/compfac/highperformance-cluster-ukko](https://www.cs.helsinki.fi/en/compfac/highperformance-cluster-ukko)
-You need to gain access to the Ukko cluster if you are not in the University network. The most
+##Prerequisites
+1. Before you start, please read Ukko instructions carefully: [https://www.cs.helsinki.fi/en/compfac/highperformance-cluster-ukko](https://www.cs.helsinki.fi/en/compfac/highperformance-cluster-ukko)
+2. You need to gain access to the Ukko cluster if you are not in the University network. The most
 convenient way is by using HY-VPN (Use OpenVPN, not Pulse Secure):
 [https://helpdesk.it.helsinki.fi/en/search?keys=HY-VPN](https://helpdesk.it.helsinki.fi/en/search?keys=HY-VPN)
-In order to transfer files between your computer and Ukko, you also need to have a SSH software (e.g.
+3. In order to transfer files between your computer and Ukko, you also need to have a SSH software (e.g.
 Putty for Windows) and a SFTP client (WinSCP for Windows, Cyberduck for OS X, FileZilla for
 Linux).
 
-**##Choose your nodes#**
+##Choose your nodes
 1. You should choose serveal nodes from the list [https://www.cs.helsinki.fi/ukko/hpc-report.txt](https://www.cs.helsinki.fi/ukko/hpc-report.txt).
 Note that the node marked with “Reserved” is not available. Please also note the “load” factor.
 2. Choose one of the chosen nodes be the namenode. All other nodes will become datanodes. Here
 we choose ukko026 be the namenode, ukko027, ukko028 and ukko029 be the datanodes.
 
-**##Setup Hadoop#**
+##Setup Hadoop
 ###PART A: On your namenode
 1. Use your SSH software to login to your namenode. Navigate to /cs/work/scratch/ folder. Make you own working directory here (NB: in case you don't have folder under /cs/work/home/).
 2. Download and extract Hadoop 2.7.3 binary distribution to your working directory. Change your current directory to your_working_dir/hadoop-2.7.3/:
@@ -76,7 +76,7 @@ You need to change the underlined hostname matches your choice of namenode.
     ./sbin/hadoop-daemon.sh stop datanode
     ./sbin/yarn-daemon.sh stop nodemanager
 
-Part D: Try out WordCount example
+###Part D: Try out WordCount example
 1. Generate wc.jar on your local computer. The source code is available at
 [https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html](https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
 2. Upload wc.jar (with your SFTP client) to your Hadoop working directory on Ukko.
@@ -91,7 +91,7 @@ $ mkdir /input
 6. Show result:
     $ ./bin/hadoop fs –cat /output/part-r-00000
 
-Additional instructions
+###Additional instructions
 1. The jps command is a shortcut for checking the status of individual service, instead of reading logs. Bear in mind however that it only indicates the process has been started, not running correctly. Always check the log when something is not working as expected.
 2. You may also browse the HDFS filesystem in web browser: On the menubar, find “Utilities” > “Browse the file system”.
 3. ./bin/hadoop fs –ls / command will show all files/folders under HDFS’s root.
