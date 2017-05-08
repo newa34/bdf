@@ -16,6 +16,7 @@ Note that the node marked with “Reserved” is not available. Please also note
 we choose ukko026 be the namenode, ukko027, ukko028 and ukko029 be the datanodes.
 
 ##Setup Hadoop
+
 ###PART A: On your namenode
 1. Use your SSH software to login to your namenode. Navigate to /cs/work/scratch/ folder. Make you own working directory here (NB: in case you don't have folder under /cs/work/home/).
 2. Download and extract Hadoop 2.7.3 binary distribution to your working directory. Change your current directory to your_working_dir/hadoop-2.7.3/:
