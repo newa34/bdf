@@ -1,7 +1,9 @@
 **Apache Hive Installation.**
 
 **Download and extract**
-Download stable version of Hive. https://hive.apache.org/downloads.html
+Download stable version of Hive. 
+https://hive.apache.org/downloads.html 
+
 Current stable version : Hive-1.2.2 (release on 7April 2017)
 
     $tar xvzf apache-hive-1.2.2-bin.tar.gz
