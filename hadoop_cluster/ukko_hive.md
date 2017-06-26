@@ -1,3 +1,4 @@
+
 **Apache Hive Installation.**
 
 **Download and extract**
@@ -222,9 +223,3 @@ Count the number of rows in the table patent;
         OK
         2923923
         Time taken: 23.842 seconds, Fetched: 1 row(s)
-
-
-
-
-
-
