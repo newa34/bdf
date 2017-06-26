@@ -6,8 +6,8 @@ Download stable version of Hive. https://hive.apache.org/downloads.html
 Current stable version : Hive-1.2.2 (release on 7April 2017)
 
 Save and extract
-    sshresth@ukko144:~$ tar xvzf apache-hive-1.2.2-bin.tar.gz
-    sshresth@ukko144:~$ mv apache-hive-1.2.2-bin apache-hive-1.2.2
+    $tar xvzf apache-hive-1.2.2-bin.tar.gz
+    $mv apache-hive-1.2.2-bin apache-hive-1.2.2
     
 Setting Hive Environment
     $vim ~/.bashrc
