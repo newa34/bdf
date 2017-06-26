@@ -4,15 +4,12 @@
 Download stable version of Hive. https://hive.apache.org/downloads.html
 Current stable version : Hive-1.2.2 (release on 7April 2017)
 
-**Save and extract**
-
     $tar xvzf apache-hive-1.2.2-bin.tar.gz
     $mv apache-hive-1.2.2-bin apache-hive-1.2.2
     
 **Setup Hive Environment**
 Open bashrc file and add following lines:
 	
-
     $vim ~/.bashrc
 
     export HIVE_HOME=<path_to_hive_directory>/apache-hive-1.2.2
@@ -36,11 +33,10 @@ Find the line with #HADOOP_HOME and add below line
 
        $hive
 
-Hive shell will prompt 
+Hive shell  prompt will load:
 
     Logging initialized using configuration in jar:file:/cs/work/home/users/apache-hive-1.2.2/lib/hive-common-1.2.2.jar!/hive-log4j.properties
     hive>
-    Run command:
     hive> show databases;
     OK
     default
@@ -54,10 +50,9 @@ Another way to configure is to use an external database server for Metastore. He
 
 **Download and install Apache Derby**
  
-Download from:
+**Download from**:
 https://db.apache.org/derby/derby_downloads.html
- 
-db-derby-10.10.2.0 (*derby version shipped with Hive can be viewed on derby.log created in Hive embedded mode*)
+ e.g db-derby-10.10.2.0 (*derby version shipped with Hive can be viewed on derby.log created in Hive embedded mode*)
 
 **Extract**
 
@@ -65,7 +60,7 @@ db-derby-10.10.2.0 (*derby version shipped with Hive can be viewed on derby.log 
     $ mv db-derby-10.10.2.0-bin  db-derby-10.10.2.0
 
  
-**Setup Environment**
+**Set Environment for Derby**
    
      $ vim ~/.bashrc
      
@@ -167,7 +162,8 @@ Some configuration files to remember
  - Log4j configuration is stored in <install-dir>/conf/hive-log4j.properties
  - hive log file is default at /tmp/hive/hive.log
 
-**Example use case** 
+**Example Use case** 
+
 Create table with “,” delimited text file format:
 
     $ vim sample.sql    
@@ -200,6 +196,7 @@ Create table with “,” delimited text file format:
     ROW FORMAT DELIMITED
     FIELDS TERMINATED BY ','
     STORED AS TEXTFILE;
+
 create patent table with hive command below;
 
     $hive -f sample.sql
@@ -223,3 +220,9 @@ Count the number of rows in the table patent;
         OK
         2923923
         Time taken: 23.842 seconds, Fetched: 1 row(s)
+
+
+
+
+
+
