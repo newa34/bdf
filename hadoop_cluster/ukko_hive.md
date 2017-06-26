@@ -42,7 +42,7 @@ OK
 default
 Time taken: 1.419 seconds, Fetched: 1 row(s)
 hive>
- 
+
 Installation is completed with default configurations options. This configuration is called embedded metastore i.e Hive driver, metastore interface and the db(derby) all use the same JVM. It is non-scalable as only a single user can connect to the derby database at any instant of time. The above “hive” command will throw an error stating database exist but lack the metastore services if runned again.
 ---------------------------------------------------------------------------------
 
